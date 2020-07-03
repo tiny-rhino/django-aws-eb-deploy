@@ -26,6 +26,10 @@ inputs:
     description: "The AWS secret access key"
     required: true
 
+  eb_environment_name:
+    description: "The name of the ELB deployment target"
+    required: false
+
   django_path:
     description: "This is the path at which the your django project is located in you github repo"
     required: false

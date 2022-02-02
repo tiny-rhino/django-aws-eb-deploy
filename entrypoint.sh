@@ -87,10 +87,10 @@ if $INPUT_DEPLOY; then
     aws configure set aws_secret_access_key $INPUT_AWS_SECRET_ACCESS_KEY --profile eb-cli
 
     echo "🔥🔥🔥🔥🔥🔥🔥🔥Deploying🔥🔥🔥🔥🔥🔥🔥🔥🔥"
-    if $INPUT_EB_ENVIRONMENT_NAME; then
-        eb deploy $INPUT_EB_ENVIRONMENT_NAME
-    else
+    if [ -z ${INPUT_EB_ENVIRONMENT_NAME+x} ]; then
         eb deploy
+    else
+        eb deploy $INPUT_EB_ENVIRONMENT_NAME
     fi
 else
     echo "🔥🔥🔥🔥🔥🔥🔥Skipping deploy🔥🔥🔥🔥🔥🔥🔥🔥"

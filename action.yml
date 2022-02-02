@@ -5,8 +5,8 @@ author: "Joel-hanson@github.com"
 inputs:
   flake8:
     description: "Do we need to run flake8 linting?"
-    required: true
-    default: true
+    required: false
+    default: false
 
   flake8_config_file:
     description: "The flake8 config path relative to the github repository (this requires input flake8 to be true)"

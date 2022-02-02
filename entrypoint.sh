@@ -29,6 +29,7 @@ cd $INPUT_DJANGO_PATH
 
 if $INPUT_UNIT_TESTING; then
     if $INPUT_POSTGRESQL_REQUIRED; then
+        pip install psycopg2
         service postgresql start
         export DATABASE_URL='postgresql://docker:docker@127.0.0.1:5432/db'
         echo "postgresql"

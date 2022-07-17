@@ -302,6 +302,14 @@ jobs:
 
 ---
 
+## Deploy new version of this action
+
+Got changes to the action you want to make available to everyone?
+See the documentation at Github concerning Actions here: https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action#commit-tag-and-push-your-action-to-github 
+In essens make a new tag which will then be available to use a new action in the `uses` section of your config.
+
+
+
 ### License 👨🏻‍💻
 
 The Dockerfile and associated scripts and documentation in this project are released under the [MIT License](LICENSE).

@@ -86,6 +86,8 @@ if $INPUT_DEPLOY; then
     aws configure set aws_access_key_id $INPUT_AWS_ACCESS_KEY_ID --profile eb-cli
     aws configure set aws_secret_access_key $INPUT_AWS_SECRET_ACCESS_KEY --profile eb-cli
 
+    git config --global --add safe.directory $GITHUB_WORKSPACE
+
     echo "🔥🔥🔥🔥🔥🔥🔥🔥Deploying🔥🔥🔥🔥🔥🔥🔥🔥🔥"
     if [ -z ${INPUT_EB_ENVIRONMENT_NAME+x} ]; then
         eb deploy
